@@ -1,4 +1,4 @@
-# flutter_application_3
+# Bloom Frontend
 
 A new Flutter project.
 
