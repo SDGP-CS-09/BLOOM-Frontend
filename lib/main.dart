@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'screens/splash_screen/splash_screen.dart'; // Import SplashScreen
+import 'screens/home/home_screen.dart'; // Import HomeScreen
 
 void main() {
   runApp(MyApp());
@@ -16,7 +17,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: SplashScreen(), // Use SplashScreen as the home screen
+      home: SplashScreen(), // Set SplashScreen as the home screen
+      routes: {
+        '/home': (context) => HomeScreen(), // Define named route for HomeScreen
+      },
     );
   }
 }
