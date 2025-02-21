@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
+import 'package:flutter_application_3/screens/home/home_screen.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -81,22 +83,6 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Home Screen"),
-      ),
-      body: Center(
-        child: Text("This is the home screen."),
       ),
     );
   }
