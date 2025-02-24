@@ -29,7 +29,8 @@ class _HomeScreenState extends State<HomeScreen> {
           await fetchWeather(position.latitude, position.longitude);
 
       setState(() {
-        _city = weatherData['name'];
+        _city =
+            "${weatherData['name']}, ${weatherData['sys']['country']}"; // Include country
         _temperature = "${weatherData['main']['temp'].toStringAsFixed(0)}°C";
         _weatherIcon = getWeatherEmoji(weatherData['weather'][0]['main']);
       });
