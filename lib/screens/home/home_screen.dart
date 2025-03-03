@@ -120,7 +120,7 @@ class _HomeScreenState extends State<HomeScreen> {
     List<Widget> _pages = [
       Column(
         children: [
-          const SizedBox(height: 50), // Space under status bar
+          const SizedBox(height: 50),
 
           // Search Bar
           Padding(
@@ -187,6 +187,110 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
 
           const SizedBox(height: 20),
+
+          const SizedBox(height: 20),
+
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Container(
+              width: 327,
+              height: 158,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(14),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.05),
+                    blurRadius: 5,
+                    spreadRadius: 1,
+                  ),
+                ],
+              ),
+              padding: const EdgeInsets.all(16),
+              child: Row(
+                children: [
+                  // Plant image
+                  Image.asset(
+                    'assets/plant_image.png',
+                    width: 80,
+                    height: 120,
+                    errorBuilder: (context, error, stackTrace) => Container(
+                      width: 80,
+                      height: 120,
+                      color: Colors.grey.shade200,
+                      child: const Icon(
+                        Icons.photo,
+                        color: Colors.grey,
+                        size: 40,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 16),
+                  // Text content
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          "Check your plant",
+                          style: TextStyle(
+                            fontFamily: 'Poppins',
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                            color: Color(0xFF1F4E20),
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        const Text(
+                          "Take photos, start diagnose diseases & get plant care tips",
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Colors.grey,
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+                        // Diagnose button
+                        SizedBox(
+                          height: 36,
+                          width: 100,
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: const Color(0xFF1F4E20),
+                              foregroundColor: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18),
+                              ),
+                              padding: EdgeInsets.zero,
+                            ),
+                            child: const Text("Diagnose"),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+
+          const SizedBox(height: 20),
+
+          // All Features Title
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20.0),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "All Features",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
 
           Expanded(
             child: Center(
