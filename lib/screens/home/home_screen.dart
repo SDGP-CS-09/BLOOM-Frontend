@@ -219,7 +219,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         // Plant image
                         Image.asset(
-                          'assets/monstera-deliciosa-plant-pot__1_-removebg-preview 1.png',
+                          'assets/Logos/card.png',
                           width: 80,
                           height: 120,
                           errorBuilder: (context, error, stackTrace) =>
@@ -316,7 +316,7 @@ class _HomeScreenState extends State<HomeScreen> {
     ];
 
     return Scaffold(
-      backgroundColor: const Color(0xFFB2D8B2),
+      backgroundColor: const Color(0xFFF4FAF4),
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomAppBar(
         shape: const CircularNotchedRectangle(),
